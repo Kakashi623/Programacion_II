@@ -8,18 +8,14 @@ public class Test {
 
         Random aleatorio = new Random();
 
-        // Llenar el arreglo con números aleatorios
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = aleatorio.nextInt(100000);
         }
 
-        // Crear el cronómetro
         Cronometro cronometro = new Cronometro();
 
-        // Iniciar
         cronometro.inicia();
 
-        // Ordenamiento por selección
         for (int i = 0; i < numeros.length - 1; i++) {
 
             int menor = i;
@@ -31,13 +27,11 @@ public class Test {
                 }
             }
 
-            // Intercambiar
             int temporal = numeros[i];
             numeros[i] = numeros[menor];
             numeros[menor] = temporal;
         }
 
-        // Detener
         cronometro.detener();
 
         System.out.println(
